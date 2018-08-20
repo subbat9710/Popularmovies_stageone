@@ -1,5 +1,4 @@
-# Popularmovies_stageone
-<h2>Udacity Nanodegree Project</h2>
+# Popularmovies Stageone
 <P>Task to do</P>
 <li>Present the user with a grid arrangement of movie posters upon launch.</li>
 <h4>Allow your user to change sort order via a setting:</h4>

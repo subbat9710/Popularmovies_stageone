@@ -46,7 +46,7 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         title.setText(mMovie.getTitle());
         releaseDate.setText("Release Date: " + mMovie.getReleaseDate());
-        description.setText("Description: \n" + mMovie.getDescription());
+        description.setText("Description: " + mMovie.getDescription());
         userRating.setText("Rating: " + Double.toString(mMovie.getVoteAverage()));
 
         Picasso.with(this)
