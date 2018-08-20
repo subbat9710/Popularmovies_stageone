@@ -29,7 +29,7 @@ import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
+public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private MoviesAdapter mAdapter;
@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        //setSupportActionBar(toolbar);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -174,24 +171,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
             // The adapter needs to know that the data has changed. If we don't call this, app will crash.
             notifyDataSetChanged();
-        }
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s){
-       // Log.d(LOG_TAG, "Preferences updated");
-        checkSortOrder();
-    }
-    private void checkSortOrder(){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String sortOrder = preferences.getString(
-                this.getString(R.string.title_activity_movie_detail),
-                this.getString(R.string.action_settings1)
-        );
-        if (sortOrder.equals(this.getString(R.string.action_settings1))){
-            getPopularMovies();
-        } else {
-            getTopRatedMovies();
         }
     }
 }

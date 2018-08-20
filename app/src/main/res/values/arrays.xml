@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="pref_sort_order">
-        <item>@string/action_settings1</item>
-        <item>@string/action_settings</item>
-    </string-array>
-</resources>
